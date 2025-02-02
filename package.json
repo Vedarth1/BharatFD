@@ -1,0 +1,29 @@
+{
+  "name": "assignment",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev":"nodemon index.js",
+    "start": "node index.js",
+    "test": "mocha test/**/*.test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@adminjs/express": "^6.1.1",
+    "@adminjs/mongoose": "^4.1.0",
+    "@vitalets/google-translate-api": "^9.2.1",
+    "adminjs": "^7.8.15",
+    "chai": "^5.1.2",
+    "dotenv": "^16.4.7",
+    "eslint": "^9.19.0",
+    "express": "^4.21.2",
+    "ioredis": "^5.4.2",
+    "mocha": "^11.1.0",
+    "mongoose": "^8.9.6",
+    "nodemon": "^3.1.9",
+    "redis": "^4.7.0",
+    "supertest": "^7.0.0"
+  }
+}
