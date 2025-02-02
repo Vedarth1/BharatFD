@@ -1,4 +1,4 @@
-const {translate} = require('@vitalets/google-translate-api');
+import {translate} from '@vitalets/google-translate-api';
 
 const translator = async (text, targetLang) => {
   try {
@@ -10,4 +10,4 @@ const translator = async (text, targetLang) => {
   }
 };
 
-module.exports={ translator };
+export { translator };
