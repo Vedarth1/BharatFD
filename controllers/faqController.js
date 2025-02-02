@@ -1,6 +1,6 @@
-const { Faq } = require('../models/faqModel.js');
-const { redisClient } = require('../config/redis.js');
-const { translator } = require('../services/translation.js');
+import { Faq } from '../models/faqModel.js';
+import { redisClient } from '../config/redis.js';
+import { translator } from '../services/translation.js';
 
 const invalidateCache = async () => {
   const cacheKeys = await redisClient.keys('faqs:*');
@@ -60,4 +60,4 @@ const createFaq = async (req, res) => {
   }
 };
 
-module.exports= { getFaqs, createFaq };
+export { getFaqs, createFaq };

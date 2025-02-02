@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  app:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: my_app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - redis
+    environment:
+      - PORT=3000
+      - MONGODB_URI=mongodb+srv://ambilkarvr:vedarth@login.2s6m0mx.mongodb.net/
+      - REDIS_URL=redis://localhost:6379
+      - ADMINJS_COOKIE_SECRET=vedarth
+    networks:
+      - my_network
+
+  redis:
+    image: redis:latest
+    container_name: my_redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - my_network
+
+networks:
+  my_network:
+
+volumes:
+  redis_data:
